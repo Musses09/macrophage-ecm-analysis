@@ -29,7 +29,7 @@ for group in feature_groups:
     for exp in experimental_samples:
         exp_file = input_experimentals / f"{group}_{exp}.csv"
         if not exp_file.exists():
-            print(f"⚠️ Skipping missing file: {exp_file}")
+            print(f" Skipping missing file: {exp_file}")
             continue
 
         # Load and clean experimental data
@@ -106,4 +106,4 @@ for group in feature_groups:
                     pdf.savefig()
                     plt.close()
 
-        print(f"✅ Saved PCA results → {pdf_path}")
+        print(f" Saved PCA results → {pdf_path}")
